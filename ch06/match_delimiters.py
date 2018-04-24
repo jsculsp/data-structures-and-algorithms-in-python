@@ -1,3 +1,6 @@
+from array_stack import ArrayStack
+
+
 def is_matched(expr):
     """Return True if all delimiters are properly match; False otherwise."""
     lefty = '({['  # opening delimiters
