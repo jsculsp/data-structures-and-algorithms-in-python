@@ -1,3 +1,6 @@
+from array_stack import ArrayStack
+
+
 def reverse_file(filename):
     """Overwrite given file with its contents line-by-line reversed."""
     S = ArrayStack()

@@ -1,4 +1,6 @@
-from ..exceptions import Empty
+class Empty(Exception):
+    """Basic example of an adapter class to provide a stack interface to Python's list."""
+    pass
 
 
 class ArrayQueue:
@@ -42,7 +44,7 @@ class ArrayQueue:
     def enqueue(self, e):
         """Add an element to the back of queue."""
         if self._size == len(self._data):
-            self._resize(2 * len(self.data))  # double the array size
+            self._resize(2 * len(self._data))  # double the array size
         avail = (self._front + self._size) % len(self._data)
         self._data[avail] = e
         self._size += 1
