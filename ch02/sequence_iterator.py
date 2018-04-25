@@ -10,7 +10,7 @@ class SequenceIterator:
         """Return the next element, or else raise StopIteration error."""
         self._k += 1  # advance to next index
         if self._k < len(self._seq):
-            return (self._seq[self._k])  # return the data element
+            return self._seq[self._k]  # return the data element
         else:
             raise StopIteration()  # there are no more elements
 

@@ -1,5 +1,4 @@
 from ..ch07.linked_queue import LinkedQueue
-import collections
 
 
 class Tree:
