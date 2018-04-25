@@ -1,4 +1,4 @@
-from ..ch07.linked_queue import LinkedQueue
+from ch07.linked_queue import LinkedQueue
 
 
 class Tree:

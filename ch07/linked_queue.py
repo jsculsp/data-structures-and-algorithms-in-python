@@ -1,4 +1,4 @@
-from ..exceptions import Empty
+from exceptions import Empty
 
 
 class LinkedQueue:
