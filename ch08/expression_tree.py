@@ -56,8 +56,10 @@ class ExpressionTree(LinkedBinaryTree):
                 return left_val - right_val
             elif op == '/':
                 return left_val / right_val
-            else:  # treat 'x' or '*' as multiplication
+            elif op in ['*', 'x']:  # treat 'x' or '*' as multiplication
                 return left_val * right_val
+            else:
+                raise ValueError('token must be valid operator')
 
 
 def tokenize(raw):
@@ -102,5 +104,11 @@ def build_expression_tree(tokens):
 
 
 if __name__ == '__main__':
-    big = build_expression_tree(tokenize('((((3+1)x3)/((9-5)+2))-((3x(7-4))+6))'))
+    token = tokenize('((((3+1)x3)/((9-5)+2))-((3x(7-4))+6))')
+    big = build_expression_tree(token)
     print(big, '=', big.evaluate())
+    # et1 = ExpressionTree('444')
+    # et2 = ExpressionTree('555')
+    # et3 = ExpressionTree('*', et1, et2)
+    # a = next(et3.children(et3.root()))
+    # print(et3._evaluate_recur(a))

@@ -23,6 +23,7 @@ def preorder_label(T, p, d, path):
     for c in T.children(p):
         preorder_label(T, c, d + 1, path)  # child depth is d+1
         path[-1] += 1
+    # print(2 * d * ' ' + 'path: ', path)
     path.pop()
 
 
